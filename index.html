@@ -3,22 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered Text</title>
+    <title>Kitten Animation</title>
     <style>
-        body, html {
-            height: 100%;
+        body {
             margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f0f8ff;
         }
-        .center-text {
-            font-size: 14px;
+        .kitten {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-image: url('https://placekitten.com/100/100');
+            background-size: cover;
+            top: 50%;
+            transform: translateY(-50%);
+            animation: run 20s linear infinite;
+        }
+        @keyframes run {
+            0% {
+                left: -100px;
+            }
+            100% {
+                left: 100vw;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="center-text">DRUPAD MADHAVAN's WEBSITE</div>
+    <div class="kitten"></div>
 </body>
 </html>
